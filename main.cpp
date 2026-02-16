@@ -11,11 +11,15 @@ struct Customer {
 };
 
 void fullDetails(Customer C) {
+    cout.setf(ios::fixed, ios::floatfield);
+    cout.precision(2);
     cout << "User ID: " << C.username << " | Name: " << C.name << endl;
     cout << "Balance: $" << C.balance << endl;
 }
 
 void basicDetails(Customer C) {
+    cout.setf(ios::fixed, ios::floatfield);
+    cout.precision(2);
     cout << "Account Holder: " << C.name << endl;
     cout << "User: " << C.username << endl;
 }
@@ -29,7 +33,8 @@ int main() {
 
     for (int i = 0; i < num; i++) {
         cout << "\n     Registering Customer " << i + 1 << "    " << endl;
-        cout << "Name: ";     cin >> bankDB[i].name;
+        cout << "Full Name: ";     cin.ignore();
+        cin.getline(bankDB[i].name, 20);
         cout << "Username: "; cin >> bankDB[i].username;
         cout << "Password: "; cin >> bankDB[i].password;
         cout << "Balance: ";  cin >> bankDB[i].balance;
@@ -48,14 +53,14 @@ int main() {
 
         // Manager check using company provided password
         if (strcmp(p, "Branch1*") == 0) {
-            cout << "\nMANAGER VIEW (ALL RECORDS)";
+            cout << "\nMANAGER VIEW (ALL RECORDS)\n";
             for (int i = 0; i < num; i++) {
                 fullDetails(bankDB[i]);
             }
         }
         // Staff check using company provided password
         else if (strcmp(p, "Staff123*") == 0) {
-            cout << "\nSTAFF VIEW (NAMES ONLY) ";
+            cout << "\nSTAFF VIEW (NAMES ONLY)\n";
             for (int i = 0; i < num; i++) {
                 basicDetails(bankDB[i]);
             }
