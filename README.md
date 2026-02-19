@@ -1,4 +1,4 @@
-# Simple-bank-login-CPP
+
 A basic C++ program using structures, loops, and arrays for storing basic customer details and role-based access for banking management
 
 ## Bank Management Login System (C++)
@@ -14,3 +14,6 @@ A simple program created for my C++ programming class. It uses structures, loops
 - Working with structures to group data.
 - Using strcmp from <cstring> for password authentication.
 - Register multiple records using arrays and loops
+
+
+⚠️ **Note: This is an educational project built for introducing the need for OOP in C++. The code lacks encryption and data scalability, making it impractical for a real-life banking system.**
