@@ -40,7 +40,8 @@ int main() {
         cout << "Balance: ";  cin >> bankDB[i].balance;
     }
 
-    cout << "\nRegistration Complete. Switching to Login Portal...\n";
+    cout << "\nRegistration Complete \n";
+    cout << "\nOpening Login Portal\n";
 
     // 1. Login Portal
     char u[20], p[20];
